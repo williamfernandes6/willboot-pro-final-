@@ -4,116 +4,26 @@
   <meta charset="UTF-8">
   <title>Planos VIP - WillBoot PRO</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    function acessarSinaisVIP() {
-      const user = prompt("👤 Usuário:");
-      const senha = prompt("🔒 Senha:");
-      if (user === "willbootpro" && senha === "willbootpro...2025") {
-        window.location.href = "sinais-vip.html";
-      } else {
-        alert("❌ Acesso negado. Apenas para o proprietário.");
-      }
-    }
-
-    function selecionarPlano(plano) {
-      alert(`📲 Escolhido: ${plano}\n\nPara pagar:\n1. Abra o app Multicaixa Express\n2. Envie para: 929010175\n3. Valor conforme o plano\n4. Envie o comprovativo no WhatsApp`);
-    }
-  </script>
-  <style>
-    body {
-      background: #0c0c0c;
-      color: white;
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .hero {
-      text-align: center;
-      background: #1f1f1f;
-      padding: 40px 20px;
-    }
-    .vip-planos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 30px;
-    }
-    .plano {
-      background: #222;
-      padding: 40px;
-      width: 220px;
-      border-radius: 20px;
-      text-align: center;
-      font-size: 1.6em;
-      border: 2px solid red;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .plano:hover {
-      transform: scale(1.05);
-      background: #333;
-    }
-    .destaque {
-      border: 3px solid gold;
-    }
-    .pagamento {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 1.4em;
-      padding: 10px;
-    }
-    .vip-button {
-      background: red;
-      color: white;
-      font-size: 1.5em;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 12px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
-    h1, h2 {
-      font-size: 2.2em;
-    }
-  </style>
 </head>
 <body>
   <header class="hero">
-    <h1>💎 Acesso VIP - WillBoot PRO</h1>
-    <p style="font-size: 1.3em;">Escolha um plano e desbloqueie os sinais mais poderosos</p>
+    <h1 style="font-size: 2.2em;">💎 Escolha seu Plano VIP</h1>
+    <p style="font-size: 1.3em;">Desbloqueie sinais poderosos e com alta precisão</p>
   </header>
-
-  <main class="vip-planos">
-    <div class="plano" onclick="selecionarPlano('12 horas - 500 Kz')">
-      <h3>12h</h3>
-      <p>500 Kz</p>
+  <main class="main-content">
+    <div class="vip-planos" style="text-align: center; font-size: 1.5em;">
+      <div class="plano"><h3>12 Horas</h3><p>500 Kz</p></div>
+      <div class="plano destaque"><h3>24 Horas</h3><p>1.000 Kz</p></div>
+      <div class="plano"><h3>7 Dias</h3><p>7.000 Kz</p></div>
+      <div class="plano"><h3>30 Dias</h3><p>15.000 Kz</p></div>
     </div>
-    <div class="plano destaque" onclick="selecionarPlano('24 horas - 1.000 Kz')">
-      <h3>24h</h3>
-      <p>1.000 Kz</p>
-    </div>
-    <div class="plano" onclick="selecionarPlano('7 dias - 7.000 Kz')">
-      <h3>7 Dias</h3>
-      <p>7.000 Kz</p>
-    </div>
-    <div class="plano" onclick="selecionarPlano('30 dias - 15.000 Kz')">
-      <h3>30 Dias</h3>
-      <p>15.000 Kz</p>
+    <div style="text-align: center; margin-top: 30px; font-size: 1.3em;">
+      <h3>📲 Pagamento via Multicaixa Express</h3>
+      <p><strong>Número:</strong> <span style="color: red;">929010175</span></p>
+      <p>📤 Envie o comprovativo para o WhatsApp acima</p>
+      <p>⏱️ A liberação é rápida após confirmação</p>
     </div>
   </main>
-
-  <section class="pagamento">
-    <h2>📲 Pagamento pelo Multicaixa Express</h2>
-    <p>1️⃣ Abra o app Multicaixa Express</p>
-    <p>2️⃣ Selecione “Transferência”</p>
-    <p>3️⃣ Número: <strong>929010175</strong></p>
-    <p>4️⃣ Valor conforme o plano</p>
-    <p>5️⃣ Envie o comprovativo para o WhatsApp</p>
-  </section>
-
-  <div style="text-align:center; padding-bottom: 40px;">
-    <button onclick="acessarSinaisVIP()" class="vip-button">🔐 Já sou VIP – Ver Sinais</button>
-  </div>
+  <footer style="text-align:center; padding:20px;">© 2025 WillBoot PRO • Todos os direitos reservados</footer>
 </body>
-  </html>
+</html>
