@@ -1,36 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Sinais VIP - WillBoot PRO</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    window.onload = function () {
-      const user = prompt("👤 Usuário VIP:");
-      const senha = prompt("🔒 Senha:");
-      if (user !== "willbootpro" || senha !== "willbootpro...2025") {
-        alert("❌ Acesso negado. Apenas para usuários VIP.");
-        window.location.href = "index.html";
-      }
-    }
-  </script>
 </head>
 <body>
   <header class="hero">
-    <h1>💎 Sinais VIP - IA Aprimorada</h1>
-    <p>Sinais com alta precisão e confiança superior</p>
+    <h1>🔐 Sinais VIP Super Inteligentes</h1>
+    <p>IA simulada com máxima precisão (VIP)</p>
   </header>
   <main class="main-content">
     <section class="sinais-container">
       <div id="sinal-box">
-        <p><strong>🎯 Sinal:</strong> <span id="resultado">✈️ Avião no ar...</span></p>
+        <p><strong>🎯 Sinal:</strong> <span id="resultado">---</span></p>
         <p><strong>📊 Confiança:</strong> <span id="confianca">--%</span></p>
         <p><strong>🕐 Atualizado:</strong> <span id="horario">--:--:--</span></p>
-        <p><strong>⏱️ Estado:</strong> <span id="countdown">⏱️ Aguarde: 10s</span></p>
-        <p><strong>🤖 IA VIP:</strong> Inteligência simulada de alta performance</p>
       </div>
     </section>
   </main>
-  <script src="script.js"></script>
+  <audio id="alerta-audio" src="audio/sinal-novo.mp3"></audio>
+  <script src="script-vip.js"></script>
 </body>
 </html>
