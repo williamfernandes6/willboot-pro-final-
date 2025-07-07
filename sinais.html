@@ -1,30 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Sinais Aviator - WillBoot PRO</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
   <header class="hero">
-    <h1>📡 WillBoot PRO - Sinais Inteligentes</h1>
-    <p class="sub">IA simulada que aprende e prevê sinais com base no histórico</p>
+    <h1>📡 Sinais Inteligentes</h1>
+    <p>Atualizados com IA que aprende com o tempo</p>
   </header>
-
   <main class="main-content">
-    <div class="sinais-container">
+    <section class="sinais-container">
       <div id="sinal-box">
-        <p><strong style="color:#ff4c4c;">🎯 Sinal:</strong> <span id="resultado" style="color:#ff4c4c;">---</span></p>
-        <p><strong style="color:#ff4c4c;">📊 Confiança:</strong> <span id="confianca" style="color:#ff4c4c;">--%</span></p>
-        <p><strong style="color:#ff4c4c;">🕐 Atualizado:</strong> <span id="horario" style="color:#ff4c4c;">--:--:--</span></p>
-        <p><strong style="color:#ff4c4c;">⏱️ Estado:</strong> <span id="countdown" style="color:#ff4c4c;">Carregando...</span></p>
-        <p><strong style="color:#ff4c4c;">🤖 IA Aprendizado:</strong> <span id="aprendizado" style="color:#ff4c4c;">--%</span></p>
+        <p><strong>🎯 Sinal:</strong> <span id="resultado">---</span></p>
+        <p><strong>📊 Confiança:</strong> <span id="confianca">--%</span></p>
+        <p><strong>🕐 Atualizado:</strong> <span id="horario">--:--:--</span></p>
+        <p><strong>⏱️ Estado:</strong> <span id="countdown">Carregando...</span></p>
       </div>
-    </div>
+    </section>
   </main>
-
-  <footer>© 2025 WillBoot PRO • Todos os direitos reservados</footer>
   <audio id="alerta-audio" src="audio/sinal-novo.mp3"></audio>
   <script src="script.js"></script>
 </body>

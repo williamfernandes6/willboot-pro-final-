@@ -4,26 +4,48 @@
   <meta charset="UTF-8">
   <title>Planos VIP - WillBoot PRO</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <script>
+    function acessarSinais() {
+      const user = prompt("👤 Usuário:");
+      const senha = prompt("🔒 Senha:");
+      if (user === "willbootpro" && senha === "willbootpro...2025") {
+        window.location.href = "sinais.html";
+      } else {
+        alert("❌ Acesso negado. Apenas para o proprietário.");
+      }
+    }
+  </script>
 </head>
 <body>
   <header class="hero">
-    <h1 style="font-size: 2.2em;">💎 Escolha seu Plano VIP</h1>
-    <p style="font-size: 1.3em;">Desbloqueie sinais poderosos e com alta precisão</p>
+    <h1>💎 Acesso VIP - WillBoot PRO</h1>
+    <p>Desbloqueie os melhores sinais com precisão e confiança</p>
   </header>
-  <main class="main-content">
-    <div class="vip-planos" style="text-align: center; font-size: 1.5em;">
-      <div class="plano"><h3>12 Horas</h3><p>500 Kz</p></div>
-      <div class="plano destaque"><h3>24 Horas</h3><p>1.000 Kz</p></div>
-      <div class="plano"><h3>7 Dias</h3><p>7.000 Kz</p></div>
-      <div class="plano"><h3>30 Dias</h3><p>15.000 Kz</p></div>
+  <main class="vip-planos">
+    <h2 style="text-align: center; color: gold;">📦 Escolha seu plano</h2>
+    <div class="plano"><h3>12 horas</h3><p>500 Kz</p></div>
+    <div class="plano destaque"><h3>24 horas</h3><p>1.000 Kz</p><p class="badge">🔥 Mais Popular</p></div>
+    <div class="plano"><h3>7 Dias</h3><p>7.000 Kz</p></div>
+    <div class="plano"><h3>30 Dias</h3><p>15.000 Kz</p></div>
+    <div class="pagamento">
+      <h3>📲 Pagamento:</h3>
+      <p>✔️ Multicaixa Express</p>
+      <p>✔️ Confirmação automática via WhatsApp</p>
+      <p>✔️ Suporte 24h para ativação</p>
     </div>
-    <div style="text-align: center; margin-top: 30px; font-size: 1.3em;">
-      <h3>📲 Pagamento via Multicaixa Express</h3>
-      <p><strong>Número:</strong> <span style="color: red;">929010175</span></p>
-      <p>📤 Envie o comprovativo para o WhatsApp acima</p>
-      <p>⏱️ A liberação é rápida após confirmação</p>
+    <section class="conselhos">
+      <h3>📌 Dicas:</h3>
+      <ul>
+        <li>✅ Após pagar, envie o comprovativo no WhatsApp</li>
+        <li>⏱️ O plano começa após a ativação do acesso VIP</li>
+        <li>📡 Acesso aos sinais exclusivos e com IA</li>
+      </ul>
+    </section>
+    <div style="text-align:center; margin-top: 30px;">
+      <button onclick="acessarSinais()" class="vip-button">📡 Já sou VIP - Ver Sinais</button>
     </div>
   </main>
-  <footer style="text-align:center; padding:20px;">© 2025 WillBoot PRO • Todos os direitos reservados</footer>
+  <footer>© 2025 WillBoot PRO • Todos os direitos reservados</footer>
 </body>
 </html>
