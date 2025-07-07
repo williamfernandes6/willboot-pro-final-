@@ -1,73 +1,52 @@
 body {
   margin: 0;
+  padding: 0;
+  background-color: #0c0c0c;
+  color: #ffffff;
   font-family: 'Arial', sans-serif;
-  background: #0c0c0c;
-  color: #fff;
+  text-align: center;
 }
+
 .hero {
-  background: #1f1f1f;
-  padding: 30px;
-  text-align: center;
+  background-color: #1f1f1f;
+  padding: 30px 20px;
 }
-.hero .sub {
-  margin-top: 10px;
-  font-size: 1.1em;
-  color: #ccc;
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
-.button-group {
-  margin-top: 20px;
+
+.sub {
+  color: #bbb;
+  font-size: 1em;
 }
-.vip-button {
-  background: red;
-  color: white;
-  padding: 12px 25px;
-  margin: 10px;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
+
 .main-content {
-  padding: 20px;
+  padding: 30px 20px;
 }
+
 .sinais-container {
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 400px;
+  background-color: #121212;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 500px;
   margin: auto;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
+
 #sinal-box {
-  font-size: 1.2em;
-  line-height: 1.6;
+  font-size: 1.6em;
+  line-height: 2em;
 }
-.vip-planos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+
+span {
+  font-weight: bold;
+  color: #00ff99;
 }
-.plano {
-  background: #222;
-  padding: 20px;
-  border-radius: 10px;
-  width: 160px;
-  text-align: center;
-  border: 1px solid #444;
-}
-.destaque {
-  border: 2px solid gold;
-}
-.pagamento {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 0.9em;
-  color: #ccc;
-}
+
 footer {
-  text-align: center;
-  padding: 20px;
+  margin-top: 30px;
+  color: #888;
   font-size: 0.9em;
-  color: #777;
 }
