@@ -1,49 +1,31 @@
-let historico = [1.8, 2.1, 1.5, 2.0, 3.2, 1.7, 2.7, 1.9, 1.6, 3.0];
-let tempoVoo = 0;
-let segundos = 0;
-let emVoo = false;
 
-function gerarSinalInteligente() {
-  const padrao = historico.slice(-5);
-  const media = padrao.reduce((a, b) => a + b, 0) / padrao.length;
-  let sinal = parseFloat((media + Math.random() * 1.2).toFixed(2));
-  let confianca = parseFloat(Math.min(95, Math.max(70, media * 30 + Math.random() * 15)).toFixed(1));
+let historico = [1.9, 2.0, 2.1, 2.5, 1.7, 3.0, 2.2];
+let tempo = 10;
+let segundos = tempo;
 
-  historico.push(sinal);
+function gerarSinal() {
+  const media = historico.slice(-5).reduce((a, b) => a + b) / 5;
+  const sinal = (media + Math.random() * 1.3).toFixed(2);
+  const confianca = Math.min(99, Math.max(75, (media * 30 + Math.random() * 10))).toFixed(1);
+
+  historico.push(parseFloat(sinal));
   if (historico.length > 30) historico.shift();
 
-  return { sinal, confianca };
+  document.getElementById("resultado").innerText = `${sinal}x`;
+  document.getElementById("confianca").innerText = `${confianca}%`;
+  document.getElementById("horario").innerText = new Date().toLocaleTimeString();
 }
 
-function iniciarNovoCiclo() {
-  emVoo = true;
-  tempoVoo = Math.floor(Math.random() * 10) + 6;
-  segundos = tempoVoo;
-  document.getElementById("resultado").innerText = "✈️ Avião no ar...";
-  document.getElementById("confianca").innerText = "--%";
-  document.getElementById("horario").innerText = "--:--:--";
+function atualizarContador() {
   document.getElementById("countdown").innerText = `⏱️ Aguarde: ${segundos}s`;
-}
-
-function exibirNovoSinal() {
-  const novo = gerarSinalInteligente();
-  document.getElementById("resultado").innerText = `${novo.sinal}x`;
-  document.getElementById("confianca").innerText = `${novo.confianca}%`;
-  const agora = new Date();
-  document.getElementById("horario").innerText = agora.toLocaleTimeString();
-  document.getElementById("alerta-audio").play();
-  iniciarNovoCiclo();
-}
-
-setInterval(() => {
-  if (emVoo) {
-    segundos--;
-    document.getElementById("countdown").innerText = `⏱️ Aguarde: ${segundos}s`;
-    if (segundos <= 0) {
-      emVoo = false;
-      exibirNovoSinal();
-    }
+  segundos--;
+  if (segundos < 0) {
+    segundos = tempo;
+    gerarSinal();
   }
-}, 1000);
+}
 
-window.onload = iniciarNovoCiclo;
+setInterval(atualizarContador, 1000);
+window.onload = () => {
+  gerarSinal();
+};
