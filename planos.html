@@ -1,37 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Planos VIP - WillBoot PRO</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="hero">
-    <h1 style="color: gold;">💎 Acesso VIP - WillBoot PRO</h1>
-    <p class="sub">Escolha seu plano e desbloqueie sinais com IA avançada</p>
-  </header>
-
-  <main class="vip-planos">
-    <section class="planos">
-      <div class="plano"><h3>12h</h3><p>500 Kz</p></div>
-      <div class="plano destaque"><h3>24h</h3><p>1.000 Kz</p></div>
-      <div class="plano"><h3>7 dias</h3><p>7.000 Kz</p></div>
-      <div class="plano"><h3>30 dias</h3><p>15.000 Kz</p></div>
-    </section>
-    <section class="pagamento">
-      <h3>Pagamento:</h3>
-      <p>✔️ Multicaixa Express</p>
-      <p>✔️ Envie comprovativo para o WhatsApp</p>
-    </section>
-    <div class="vip-acesso">
-      <button onclick="acessarSinais()" class="vip-button">📡 Já sou VIP - Ver Sinais</button>
-    </div>
-  </main>
-
-  <footer>© 2025 WillBoot PRO • Todos os direitos reservados</footer>
-
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #0c0c0c;
+      color: #fff;
+    }
+    .hero {
+      background: #1f1f1f;
+      padding: 30px;
+      text-align: center;
+    }
+    .hero h1 {
+      color: gold;
+      font-size: 36px;
+    }
+    .hero .sub {
+      font-size: 18px;
+      color: #ccc;
+    }
+    .vip-planos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+    .plano {
+      background: #222;
+      padding: 30px;
+      border-radius: 12px;
+      width: 250px;
+      text-align: center;
+      border: 2px solid #444;
+    }
+    .plano h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .plano p {
+      font-size: 20px;
+    }
+    .destaque {
+      border: 3px solid gold;
+    }
+    .badge {
+      color: gold;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .plano-btn {
+      background: red;
+      color: white;
+      padding: 15px 30px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .plano-btn:hover {
+      background: darkred;
+    }
+    .pagamento {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 18px;
+      color: #ccc;
+    }
+    .vip-button {
+      background: red;
+      color: white;
+      padding: 14px 30px;
+      margin-top: 40px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
   <script>
+    function escolherPlano(plano, preco) {
+      alert("📦 Plano escolhido: " + plano + "\\n💰 Valor: " + preco + " Kz\\n\\n✅ Envie o comprovativo via WhatsApp para ativar seu acesso VIP.");
+    }
+
     function acessarSinais() {
       const user = prompt("👤 Usuário:");
       const senha = prompt("🔒 Senha:");
@@ -42,5 +108,50 @@
       }
     }
   </script>
+</head>
+<body>
+  <header class="hero">
+    <h1>💎 Acesso VIP - WillBoot PRO</h1>
+    <p class="sub">Escolha um plano e desbloqueie os melhores sinais com IA</p>
+  </header>
+
+  <main class="vip-planos">
+    <div class="plano">
+      <h3>12 Horas</h3>
+      <p>500 Kz</p>
+      <button class="plano-btn" onclick="escolherPlano('12h', '500')">Selecionar</button>
+    </div>
+
+    <div class="plano destaque">
+      <h3>24 Horas</h3>
+      <p>1.000 Kz</p>
+      <p class="badge">🔥 Mais Popular</p>
+      <button class="plano-btn" onclick="escolherPlano('24h', '1000')">Selecionar</button>
+    </div>
+
+    <div class="plano">
+      <h3>7 Dias</h3>
+      <p>7.000 Kz</p>
+      <button class="plano-btn" onclick="escolherPlano('7 Dias', '7000')">Selecionar</button>
+    </div>
+
+    <div class="plano">
+      <h3>30 Dias</h3>
+      <p>15.000 Kz</p>
+      <button class="plano-btn" onclick="escolherPlano('30 Dias', '15000')">Selecionar</button>
+    </div>
+  </main>
+
+  <div class="pagamento">
+    <h3>📲 Pagamento via Multicaixa Express</h3>
+    <p>✅ Suporte 24h no WhatsApp</p>
+    <p>✅ Após pagamento, envie o comprovativo</p>
+  </div>
+
+  <div style="text-align:center;">
+    <button onclick="acessarSinais()" class="vip-button">📡 Já sou VIP - Ver Sinais</button>
+  </div>
+
+  <footer>© 2025 WillBoot PRO • Todos os direitos reservados</footer>
 </body>
-</html>
+      </html>
