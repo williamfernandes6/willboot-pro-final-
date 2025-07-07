@@ -8,8 +8,10 @@ function gerarSinalInteligente() {
   const media = padrao.reduce((a, b) => a + b, 0) / padrao.length;
   let sinal = parseFloat((media + Math.random() * 1.2).toFixed(2));
   let confianca = parseFloat(Math.min(95, Math.max(70, media * 30 + Math.random() * 15)).toFixed(1));
+  
   historico.push(sinal);
   if (historico.length > 30) historico.shift();
+
   return { sinal, confianca };
 }
 
