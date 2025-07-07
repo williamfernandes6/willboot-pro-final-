@@ -1,189 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Planos VIP - WillBoot PRO</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.png" type="image/png">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #0c0c0c;
-      color: #fff;
-    }
-
-    .hero {
-      background: #1f1f1f;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 40px;
-      color: gold;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #ccc;
-    }
-
-    .vip-planos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
-    }
-
-    .plano {
-      background: #111;
-      border: 3px solid red;
-      border-radius: 15px;
-      padding: 30px;
-      width: 240px;
-      text-align: center;
-    }
-
-    .plano h3 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    .plano p {
-      font-size: 26px;
-      margin: 0;
-      color: gold;
-    }
-
-    .destaque {
-      border: 3px solid gold;
-    }
-
-    .badge {
-      font-size: 14px;
-      color: red;
-      margin-top: 5px;
-    }
-
-    .pagamento {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 20px;
-      color: #ccc;
-    }
-
-    .pagamento strong {
-      color: gold;
-      font-size: 24px;
-    }
-
-    .conselhos {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .conselhos h3 {
-      color: #ff4c4c;
-      font-size: 24px;
-    }
-
-    .conselhos ul {
-      list-style: none;
-      padding: 0;
-      font-size: 20px;
-    }
-
-    .vip-button {
-      display: inline-block;
-      padding: 20px 35px;
-      background-color: red;
-      color: white;
-      font-size: 24px;
-      border-radius: 12px;
-      text-decoration: none;
-      margin-top: 30px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .vip-button:hover {
-      background-color: darkred;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
-
-  <script>
-    function acessarSinais() {
-      const user = prompt("👤 Usuário:");
-      const senha = prompt("🔒 Senha:");
-
-      if (user === "willbootpro" && senha === "willbootpro...2025") {
-        window.location.href = "sinais.html";
-      } else {
-        alert("❌ Acesso negado. Apenas para o proprietário.");
-      }
-    }
-  </script>
 </head>
-
 <body>
   <header class="hero">
     <h1>💎 Acesso VIP - WillBoot PRO</h1>
-    <p>Desbloqueie os melhores sinais com precisão e confiança</p>
+    <p>Escolha um plano e desbloqueie os sinais mais inteligentes</p>
   </header>
-
-  <main>
-    <div class="vip-planos">
-      <div class="plano">
-        <h3>12 horas</h3>
-        <p>500 Kz</p>
-      </div>
-      <div class="plano destaque">
-        <h3>24 horas</h3>
-        <p>1.000 Kz</p>
-        <p class="badge">🔥 Mais Popular</p>
-      </div>
-      <div class="plano">
-        <h3>7 Dias</h3>
-        <p>7.000 Kz</p>
-      </div>
-      <div class="plano">
-        <h3>30 Dias</h3>
-        <p>15.000 Kz</p>
-      </div>
-    </div>
-
-    <div class="pagamento">
-      <h3>📲 Pagamento via Multicaixa Express</h3>
-      <p>✔️ Envie para: <strong>929 010 175</strong></p>
-      <p>✔️ Após pagamento, envie o comprovativo <strong>neste WhatsApp</strong></p>
-      <p>✔️ Suporte 24h para ativação</p>
-    </div>
-
-    <section class="conselhos">
-      <h3>📌 Dicas:</h3>
-      <ul>
-        <li>✅ Após pagar, envie o comprovativo no WhatsApp</li>
-        <li>⏱️ O plano inicia após a ativação VIP</li>
-        <li>📡 Acesso aos sinais inteligentes com IA</li>
-      </ul>
+  <main class="vip-planos">
+    <div class="plano"><h3>12h</h3><p>500 Kz</p></div>
+    <div class="plano destaque"><h3>24h</h3><p>1.000 Kz</p></div>
+    <div class="plano"><h3>7 dias</h3><p>7.000 Kz</p></div>
+    <div class="plano"><h3>30 dias</h3><p>15.000 Kz</p></div>
+    <section class="pagamento">
+      <h3>📲 Pagamento Multicaixa Express</h3>
+      <p>1️⃣ Abra o app Multicaixa Express</p>
+      <p>2️⃣ Escolha "Transferência"</p>
+      <p>3️⃣ Envie para: <strong>929 010 175</strong></p>
+      <p>4️⃣ Valor conforme o plano</p>
+      <p>5️⃣ Envie o comprovativo para o WhatsApp acima</p>
     </section>
-
-    <div style="text-align:center;">
-      <a href="#" onclick="acessarSinais()" class="vip-button">📡 Já sou VIP - Acessar Sinais</a>
+    <div class="button-group">
+      <a href="sinais-vip.html" class="vip-button">🔐 Acessar Sinais VIP</a>
     </div>
   </main>
-
-  <footer>© 2025 WillBoot PRO • Todos os direitos reservados</footer>
 </body>
 </html>
