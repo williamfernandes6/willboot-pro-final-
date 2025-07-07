@@ -5,16 +5,85 @@
   <title>WillBoot PRO - Página Inicial</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #0c0c0c;
+      color: #fff;
+    }
+    .hero {
+      background: #1f1f1f;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 36px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+    .sub {
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    .button-container {
+      border: 2px solid red;
+      border-radius: 12px;
+      padding: 30px 20px;
+      max-width: 400px;
+      margin: 0 auto;
+      background: #111;
+    }
+    .vip-button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin: 15px 0;
+      background-color: red;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .vip-button:hover {
+      background-color: darkred;
+    }
+    .main-content {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .main-content ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .main-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #ff4c4c;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
     <h1>🚀 WillBoot PRO</h1>
     <p class="sub">Seu robô de sinais Aviator com IA profissional em tempo real</p>
-    <div class="button-group">
-      <a href="planos.html" class="vip-button">💎 Ver Planos VIP</a>
-      <a href="sinais.html" class="vip-button">📡 Acessar Sinais</a>
+    <div class="button-container">
+      <a href="planos.html" class="vip-button">💎 Acesso VIP</a>
+      <a href="sinais.html" class="vip-button">📡 Ver Sinais</a>
     </div>
   </header>
+
   <main class="main-content">
     <section class="conselhos">
       <h3>📌 Dicas Inteligentes:</h3>
@@ -26,6 +95,7 @@
       </ul>
     </section>
   </main>
+
   <footer>© 2025 WillBoot PRO • Todos os direitos reservados</footer>
 </body>
 </html>
