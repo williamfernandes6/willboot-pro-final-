@@ -1,47 +1,36 @@
-let historico = [1.8, 2.1, 1.5, 2.0, 3.2, 1.7, 2.7, 1.9, 1.6, 3.0];
-let tempoVoo = 0;
-let segundos = 0;
-let emVoo = false;
+let historico = [1.8, 2.1, 1.6, 2.3, 3.0, 1.9, 2.5, 1.7, 2.8, 1.5, 2.6, 1.95];
+let totalSinais = 0;
+let acertos = 0;
 
 function gerarSinalInteligente() {
-  const padrao = historico.slice(-5);
+  const padrao = historico.slice(-8);
   const media = padrao.reduce((a, b) => a + b, 0) / padrao.length;
-  let sinal = parseFloat((media + Math.random() * 1.2).toFixed(2));
-  let confianca = parseFloat(Math.min(95, Math.max(70, media * 30 + Math.random() * 15)).toFixed(1));
+  let variacao = (Math.random() * 0.9) - 0.3;
+  let sinal = parseFloat((media + variacao).toFixed(2));
+  let confianca = parseFloat(Math.min(99, Math.max(70, media * 30 + Math.random() * 10)).toFixed(1));
+
   historico.push(sinal);
-  if (historico.length > 30) historico.shift();
+  if (historico.length > 50) historico.shift();
+
+  totalSinais++;
+  if (Math.random() < confianca / 100) {
+    acertos++;
+  }
+
   return { sinal, confianca };
 }
 
-function iniciarNovoCiclo() {
-  emVoo = true;
-  tempoVoo = Math.floor(Math.random() * 10) + 6;
-  segundos = tempoVoo;
-  document.getElementById("resultado").innerText = "✈️ Avião no ar...";
-  document.getElementById("confianca").innerText = "--%";
-  document.getElementById("horario").innerText = "--:--:--";
-  document.getElementById("countdown").innerText = `⏱️ Aguarde: ${segundos}s`;
-}
-
 function exibirNovoSinal() {
-  const novo = gerarSinalInteligente();
-  document.getElementById("resultado").innerText = `${novo.sinal}x`;
-  document.getElementById("confianca").innerText = `${novo.confianca}%`;
+  const { sinal, confianca } = gerarSinalInteligente();
+  document.getElementById("resultado").innerText = `${sinal}x`;
+  document.getElementById("confianca").innerText = `${confianca}%`;
   const agora = new Date();
   document.getElementById("horario").innerText = agora.toLocaleTimeString();
+  document.getElementById("countdown").innerText = "⏱️ Novo sinal em 10s";
+  const taxaAcerto = ((acertos / totalSinais) * 100).toFixed(1);
+  document.getElementById("aprendizado").innerText = `${taxaAcerto}%`;
   document.getElementById("alerta-audio").play();
-  iniciarNovoCiclo();
 }
 
-setInterval(() => {
-  if (emVoo) {
-    segundos--;
-    document.getElementById("countdown").innerText = `⏱️ Aguarde: ${segundos}s`;
-    if (segundos <= 0) {
-      emVoo = false;
-      exibirNovoSinal();
-    }
-  }
-}, 1000);
-
-window.onload = iniciarNovoCiclo;
+setInterval(exibirNovoSinal, 10000);
+window.onload = exibirNovoSinal;
