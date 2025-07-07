@@ -12,80 +12,108 @@
       background: #0c0c0c;
       color: #fff;
     }
+
     .hero {
       background: #1f1f1f;
-      padding: 30px;
+      padding: 40px 20px;
       text-align: center;
     }
+
     .hero h1 {
+      font-size: 40px;
       color: gold;
-      font-size: 36px;
+      margin-bottom: 15px;
     }
-    .hero .sub {
-      font-size: 18px;
+
+    .hero p {
+      font-size: 20px;
       color: #ccc;
     }
+
     .vip-planos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      padding: 40px;
+      padding: 40px 20px;
     }
+
     .plano {
-      background: #222;
+      background: #111;
+      border: 3px solid red;
+      border-radius: 15px;
       padding: 30px;
-      border-radius: 12px;
-      width: 250px;
+      width: 240px;
       text-align: center;
-      border: 2px solid #444;
     }
+
     .plano h3 {
-      font-size: 24px;
+      font-size: 28px;
       margin-bottom: 10px;
+      color: #fff;
     }
+
     .plano p {
-      font-size: 20px;
+      font-size: 26px;
+      margin: 0;
+      color: gold;
     }
+
     .destaque {
       border: 3px solid gold;
     }
+
     .badge {
-      color: gold;
       font-size: 14px;
+      color: red;
       margin-top: 5px;
     }
-    .plano-btn {
-      background: red;
-      color: white;
-      padding: 15px 30px;
-      margin-top: 20px;
-      border-radius: 10px;
-      border: none;
-      font-size: 18px;
-      cursor: pointer;
-      width: 100%;
-    }
-    .plano-btn:hover {
-      background: darkred;
-    }
+
     .pagamento {
       text-align: center;
-      margin-top: 50px;
-      font-size: 18px;
+      margin-top: 40px;
+      font-size: 20px;
       color: #ccc;
     }
-    .vip-button {
-      background: red;
-      color: white;
-      padding: 14px 30px;
-      margin-top: 40px;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 18px;
-      display: inline-block;
+
+    .pagamento strong {
+      color: gold;
+      font-size: 24px;
     }
+
+    .conselhos {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .conselhos h3 {
+      color: #ff4c4c;
+      font-size: 24px;
+    }
+
+    .conselhos ul {
+      list-style: none;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    .vip-button {
+      display: inline-block;
+      padding: 20px 35px;
+      background-color: red;
+      color: white;
+      font-size: 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .vip-button:hover {
+      background-color: darkred;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -93,14 +121,12 @@
       color: #777;
     }
   </style>
-  <script>
-    function escolherPlano(plano, preco) {
-      alert("📦 Plano escolhido: " + plano + "\\n💰 Valor: " + preco + " Kz\\n\\n✅ Envie o comprovativo via WhatsApp para ativar seu acesso VIP.");
-    }
 
+  <script>
     function acessarSinais() {
       const user = prompt("👤 Usuário:");
       const senha = prompt("🔒 Senha:");
+
       if (user === "willbootpro" && senha === "willbootpro...2025") {
         window.location.href = "sinais.html";
       } else {
@@ -109,49 +135,55 @@
     }
   </script>
 </head>
+
 <body>
   <header class="hero">
     <h1>💎 Acesso VIP - WillBoot PRO</h1>
-    <p class="sub">Escolha um plano e desbloqueie os melhores sinais com IA</p>
+    <p>Desbloqueie os melhores sinais com precisão e confiança</p>
   </header>
 
-  <main class="vip-planos">
-    <div class="plano">
-      <h3>12 Horas</h3>
-      <p>500 Kz</p>
-      <button class="plano-btn" onclick="escolherPlano('12h', '500')">Selecionar</button>
+  <main>
+    <div class="vip-planos">
+      <div class="plano">
+        <h3>12 horas</h3>
+        <p>500 Kz</p>
+      </div>
+      <div class="plano destaque">
+        <h3>24 horas</h3>
+        <p>1.000 Kz</p>
+        <p class="badge">🔥 Mais Popular</p>
+      </div>
+      <div class="plano">
+        <h3>7 Dias</h3>
+        <p>7.000 Kz</p>
+      </div>
+      <div class="plano">
+        <h3>30 Dias</h3>
+        <p>15.000 Kz</p>
+      </div>
     </div>
 
-    <div class="plano destaque">
-      <h3>24 Horas</h3>
-      <p>1.000 Kz</p>
-      <p class="badge">🔥 Mais Popular</p>
-      <button class="plano-btn" onclick="escolherPlano('24h', '1000')">Selecionar</button>
+    <div class="pagamento">
+      <h3>📲 Pagamento via Multicaixa Express</h3>
+      <p>✔️ Envie para: <strong>929 010 175</strong></p>
+      <p>✔️ Após pagamento, envie o comprovativo <strong>neste WhatsApp</strong></p>
+      <p>✔️ Suporte 24h para ativação</p>
     </div>
 
-    <div class="plano">
-      <h3>7 Dias</h3>
-      <p>7.000 Kz</p>
-      <button class="plano-btn" onclick="escolherPlano('7 Dias', '7000')">Selecionar</button>
-    </div>
+    <section class="conselhos">
+      <h3>📌 Dicas:</h3>
+      <ul>
+        <li>✅ Após pagar, envie o comprovativo no WhatsApp</li>
+        <li>⏱️ O plano inicia após a ativação VIP</li>
+        <li>📡 Acesso aos sinais inteligentes com IA</li>
+      </ul>
+    </section>
 
-    <div class="plano">
-      <h3>30 Dias</h3>
-      <p>15.000 Kz</p>
-      <button class="plano-btn" onclick="escolherPlano('30 Dias', '15000')">Selecionar</button>
+    <div style="text-align:center;">
+      <a href="#" onclick="acessarSinais()" class="vip-button">📡 Já sou VIP - Acessar Sinais</a>
     </div>
   </main>
 
-  <div class="pagamento">
-    <h3>📲 Pagamento via Multicaixa Express</h3>
-    <p>✅ Suporte 24h no WhatsApp</p>
-    <p>✅ Após pagamento, envie o comprovativo</p>
-  </div>
-
-  <div style="text-align:center;">
-    <button onclick="acessarSinais()" class="vip-button">📡 Já sou VIP - Ver Sinais</button>
-  </div>
-
   <footer>© 2025 WillBoot PRO • Todos os direitos reservados</footer>
 </body>
-      </html>
+</html>
